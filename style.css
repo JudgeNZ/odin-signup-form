@@ -188,7 +188,7 @@ input:focus {
     padding: 30px;
 }
 
-button {
+input[type="submit"] {
     all: unset;
     cursor: pointer;
     background-color: var(--primary-button);
@@ -196,6 +196,11 @@ button {
     border-radius: var(--button-corner-radius);
     color: var(--primary-button-font-color);
     box-shadow: 1px 2px 3px #787676;
+}
+
+.isDisabled {
+    pointer-events: none;
+    background-color: grey;
 }
 
 #existing-account-CTA {
@@ -210,7 +215,7 @@ a {
 }
 
 /* This is our style for the invalid fields */
-input:invalid {
+input.invalid {
     border-color: #900 !important;
   }
   
@@ -222,7 +227,7 @@ input:invalid {
   .error {
     width: 100%;
     padding: 0;
-    font-size: 80%;
+    font-size: 60%;
     color: #900;
     box-sizing: border-box;
   }

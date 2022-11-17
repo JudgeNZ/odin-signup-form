@@ -113,7 +113,9 @@ function checkPasswordMatch(elementTargeted){
 form.addEventListener("submit", (event) => {
     event.preventDefault();
   
-    const isValid = function(){
+    const isValid = checkAllAreValid();
+
+    function checkAllAreValid() {
         const fnameInput = document.getElementById('fname');
         const lnameInput = document.getElementById('lname');
         const emailInput = document.getElementById('email');
@@ -121,26 +123,43 @@ form.addEventListener("submit", (event) => {
         const passwordInput = document.getElementById('password');
         const confPasswordInput = document.getElementById('confirm-password');
 
+        console.log(fnameInput);
+        
         let validCheck = true;
         //firstname
-        if (checkFNameValidity(!fnameInput)){
-            //display error message
+        if (!checkFNameValidity(fnameInput)){
+            let fnameError = fnameInput.parentElement.querySelector("span");
+            fnameInput.className = "invalid";
+            fnameError.className = "error active";
+            fnameError.textContent="Enter a valid First name"
             validCheck = false;
         }
-        if (checkLNameValidity(!lnameInput)){
-            //display error message
+        if (!checkLNameValidity(lnameInput)){
+            let lnameError = lnameInput.parentElement.querySelector("span");
+            lnameInput.className = "invalid";
+            lnameError.className = "error active";
+            lnameError.textContent="Enter a valid Last Name"
             validCheck = false;
         }
-        if (checkFNameValidity(!emailInput)){
-            //display error message
+        if (!checkEmailValidity(emailInput)){
+            let emailError = emailInput.parentElement.querySelector("span");
+            emailInput.className = "invalid";
+            emailError.className = "error active";
+            emailError.textContent="Email email correctly"
             validCheck = false;
         }
-        if (checkFNameValidity(!phoneInput)){
-            //display error message
+        if (!checkPhoneValidity(phoneInput)){
+            let phoneError = phoneInput.parentElement.querySelector("span");
+            phoneInput.className = "invalid";
+            phoneError.className = "error active";
+            phoneError.textContent="Enter phone number correctly"
             validCheck = false;
         }
-        if (checkPasswordMatch(!confPasswordInput)){
-            //display error message
+        if (!checkPasswordMatch(confPasswordInput)){
+            let passwordError = confPasswordInput.parentElement.querySelector("span");
+            confPasswordInput.className = "invalid";
+            passwordError.className = "error active";
+            passwordError.textContent="*Passwords do to match"
             validCheck = false;
         }
 

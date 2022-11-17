@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,86 +9,71 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="left-container">
-        <img class="left-container-bg" src ="photo-1585202900225-6d3ac20a6962.avif">
+        <img class="left-container-bg" src="photo-1585202900225-6d3ac20a6962.avif">
         <div class="icon-container">
-            <img id='odin-icon' src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png">
+            <img id='odin-icon'
+                src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png">
             <h1 class="odin-title">ODIN</h1>
         </div>
     </div>
     <div class="right-container">
         <div class="form-hero-text-container">
-            <p class="form-hero-text-p">This is not a real online service! You know you need something like this in your life to hel you realise you deepest dreams. Sign up <i>now</i> to get started.</p>
+            <p class="form-hero-text-p">This is not a real online service! You know you need something like this in your
+                life to hel you realise you deepest dreams. Sign up <i>now</i> to get started.</p>
             <p class="form-hero-text-p">You <i>know</i> you want to!</p>
         </div>
-        <form class="form-container" novalidate>
-            <div id="form-CTA">Let's do this!</div>
-            <div class="form-row">
-                <div class="form-input">
-                    <label for='fname'>First name</label>
-                    <input id='fname'
-                           name='fname'
-                           type='text'
-                           placeholder=''
-                           autocomplete="given-name"/>
-                    <span class="error" aria-live="polite"></span>
+        <form novalidate>
+            <div class="form-container">
+                <div id="form-CTA">Let's do this!</div>
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for='fname'>First name</label>
+                        <input id='fname' name='fname' type='text' placeholder='' autocomplete="given-name" />
+                        <span class="error" aria-live="polite"></span>
+                    </div>
+                    <div class="form-input">
+                        <label for='lname'>Second name</label>
+                        <input id='lname' name='lname' type='text' placeholder='' autocomplete="family-name" />
+                        <span class="error" aria-live="polite"></span>
+                    </div>
                 </div>
-                <div class="form-input">
-                    <label for='lname'>Second name</label>
-                    <input id='lname'
-                           name='lname'
-                           type='text'
-                           placeholder=''
-                           autocomplete="family-name"/>
-                    <span class="error" aria-live="polite"></span>
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for='email'>Email</label>
+                        <input id='email' name='email' type='email' placeholder='' autocomplete="email" />
+                        <span class="error" aria-live="polite"></span>
+                    </div>
+                    <div class="form-input">
+                        <label for='phone-number'>Phone number</label>
+                        <input id='phone-number' name='phone-number' type='text' placeholder='' autocomplete="tel" />
+                        <span class="error" aria-live="polite"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="form-input">
-                    <label for='email'>Email</label>
-                    <input id='email'
-                           name='email'
-                           type='email'
-                           placeholder=''
-                           autocomplete="email"/>
-                    <span class="error" aria-live="polite"></span>
-                </div>
-                <div class="form-input">
-                    <label for='phone-number'>Phone number</label>
-                    <input id='phone-number'
-                           name='phone-number'
-                           type='text'
-                           placeholder=''
-                           autocomplete="tel"/>
-                           <span class="error" aria-live="polite"></span>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-input">
-                    <label for='password'>Password</label>
-                    <input id='password'
-                           name='password'
-                           type='text'
-                           placeholder=''
-                           autocomplete="new-password"/>
-                           <span class="error" aria-live="polite"></span>
-                </div>
-                <div class="form-input">
-                    <label for='confirm-password'>Confirm password</label>
-                    <input id='confirm-password'
-                           name='confirm-password'
-                           type='text'
-                           placeholder=''
-                           autocomplete="new-password"/>
-                           <span class="error" aria-live="polite"></span>
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for='password'>Password</label>
+                        <input id='password' name='password' type='text' placeholder='' autocomplete="new-password" />
+                        <span class="error" aria-live="polite"></span>
+                    </div>
+                    <div class="form-input">
+                        <label for='confirm-password'>Confirm password</label>
+                        <input id='confirm-password' name='confirm-password' type='text' placeholder=''
+                            autocomplete="new-password" />
+                        <span class="error" aria-live="polite"></span>
+                    </div>
                 </div>
             </div>
+            <div class="form-submit-container">
+                <input type="submit" value="Create Account">
+                <p id="existing-account-CTA">Already have an account? <a href="">Log in</a></p>
+            </div>
+
         </form>
-        <div class="form-submit-container">
-            <button>Create Account</button>
-            <p id="existing-account-CTA">Already have an account? <a href="">Log in</a></p>
-        </div>
+
     </div>
 </body>
+
 </html>
